@@ -3,6 +3,10 @@ import { API_URL } from "../util/config";
 const ProductBox = () => {
   const [product, setProduct] = useState(null);
 
+
+
+  
+
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch(`${API_URL}/v1/demo-controller/getitems`);
