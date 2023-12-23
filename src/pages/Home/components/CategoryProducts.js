@@ -1,5 +1,5 @@
 import React from "react";
-import { pic1, pic2, pic3 } from "../../../images";
+import { pic1 } from "../../../images";
 const CategoryProducts = () => {
   return (
     <div className='flex items-center flex-col mt-32'>
@@ -8,19 +8,7 @@ const CategoryProducts = () => {
         {[1, 2, 3, 4, 5, 6].map((item) => (
           <div className='flex items-center flex-col'>
             <img
-              src={
-                item === 1
-                  ? pic1
-                  : item === 2
-                  ? pic2
-                  : item === 3
-                  ? pic3
-                  : item === 4
-                  ? pic1
-                  : item === 5
-                  ? pic2
-                  : pic3
-              }
+              src={pic1}
               alt='categoty product test'
               className='w-40 h-40 object-contain'
             />
