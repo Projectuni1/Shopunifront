@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
-import testImage from "../../../images/w4-4.jpeg";
+import { mainBanner } from "../../../images";
 
 const WeeklyBest = () => {
   return (
@@ -17,7 +17,7 @@ const WeeklyBest = () => {
         {[1, 2, 3, 4, 5, 6, 7, 8].map((item, index) => (
           <SwiperSlide>
             <img
-              src={testImage}
+              src={mainBanner}
               className='max-w-56 max-h-56 object-contain'
               alt='testImage'
             />
