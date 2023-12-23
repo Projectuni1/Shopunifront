@@ -5,8 +5,10 @@ import Home from "./pages/Home";
 import Products from "./pages/Products";
 import Cart from "./pages/Cart";
 import Search from "./pages/Search";
+import Product from "./pages/Product";
 
 import Authentication from "./components/Authentication";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -16,11 +18,13 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/products' element={<Products />} />
+          <Route path='/product' element={<Product />} />
           <Route path='/cart' element={<Cart />} />
           <Route path='/search' element={<Search />} />
           <Route path='/authentication/:login' element={<Authentication />} />
         </Routes>
       </main>
+      <Footer />
     </>
   );
 };

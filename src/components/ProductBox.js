@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { API_URL } from "../util/config";
+import { pic2 } from "../images";
 const ProductBox = () => {
   const [product, setProduct] = useState(null);
-
-
-
-  
 
   useEffect(() => {
     const fetchData = async () => {
@@ -28,15 +25,21 @@ const ProductBox = () => {
         <div className='flex justify-between'>
           {product.map((item) => (
             <div
-              key={item.id}
-              className='flex flex-col items-center p-3 rounded-lg w-44 bg-gray-100 h-40'
+              key={item}
+              className='w-56 bg-[#EDE3DA] h-80 p-4 rounded-xl flex justify-between flex-col items-center'
             >
-              <h3 className='mb-6 font-bold text-lg line-clamp-1'>
-                {item.title}
-              </h3>
-              <span className='font-medium text-sm line-clamp-2'>
-                {item.itemDesc}
-              </span>
+              <img
+                src={pic2}
+                alt='testImage'
+                className='rounded-md h-44 w-44 object-contain'
+              />
+              <div className='text-center my-3 text-base'>{item.title}</div>
+              <button
+                type='button'
+                className='w-28 h-10 rounded-lg font-semibold text-white bg-[#742062] text-sm'
+              >
+                مشاهده
+              </button>
             </div>
           ))}
         </div>
